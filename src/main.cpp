@@ -2005,20 +2005,20 @@ bool LoadBlockIndex(bool fAllowNew)
     {
         if (!fAllowNew)
             return false;
-    
+
 	// Genesis block:
 	/*
-	block.nTime = 1399574511 
-	block.nNonce = 2086299649 
+	block.nTime = 1399574511
+	block.nNonce = 2086299649
 	block.GetHash = 14dc23f54de47df797172d66531e7a115b782e65f69dda7bf5a4e98fac0ae086
 	CBlock(hash=14dc23f54de47df79717, PoW=00000aeb1f05fbf0b2fa, ver=1, 			hashPrevBlock=00000000000000000000, hashMerkleRoot=ef7e256a2c, 			nTime=1399574511, nBits=1e0ffff0, nNonce=2086299649, vtx=1)
   	CTransaction(hash=ef7e256a2c, ver=1, vin.size=1, vout.size=1, nLockTime=0)
     	CTxIn(COutPoint(0000000000, -1), coinbase 				04ffff001d010414466972737420646179206f662050726f6a656374)
     	CTxOut(error)
   	vMerkleTree: ef7e256a2c */
-        
+
         // Genesis block
-        const char* pszTimestamp = "First day of Project";
+        const char* pszTimestamp = "Fictec 2018 iniciará el próximo 29 de noviembre";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2030,13 +2030,13 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1400539822;
+        block.nTime    = 1540578213;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 2086299649;
 
         if (fTestNet)
         {
-            block.nTime    = 1399574511;
+            block.nTime    = 1540578213;
             block.nNonce   = 386402991;
         }
 
